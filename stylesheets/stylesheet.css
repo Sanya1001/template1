@@ -89,14 +89,26 @@ body{
     color: rgb(167, 233, 167);
 }
 
+#navbar a:hover{
+    color: white;
+}
+
 #header-text a, #phone-header a{
     color: rgb(167, 233, 167);
+}
+
+#header-text a:hover, #phone-header a:hover{
+    text-decoration: underline;
 }
 
 a{
     text-decoration: none;
     color: rgb(9, 107, 70);
     font-weight: bold;
+}
+
+a:hover{
+    color: rgb(9, 165, 9);
 }
 
 #header-text h1{
