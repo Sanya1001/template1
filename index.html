@@ -4,56 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Workshop</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <!-- Latest compiled and minified CSS -->
+    <title>CLeaR 2022</title>
 </head>
 <body>
     <nav id="navbar">
-        <div class="nav-item">
+        <div class="nav-item nph">
+            <a href="#overview">Overview</a>
+        </div>
+        <div class="nav-item nph">
             <a href="#topics">Topics</a>
         </div>
-        <div class="nav-item">
+        <div class="nav-item nph">
             <a href="#schedule">Schedule</a>
         </div>
-        <div class="nav-item">
+        <div class="nav-item nph">
             <a href="#speakers">Invited Speakers</a>
         </div>
-        <div class="nav-item">
+        <!-- <div class="nav-item">
             <a href="#papers">Submissions</a>
+        </div> -->
+        <div class="nav-item nph">
+            <a href="#accepted">Accepted Paper</a>
         </div>
-        <div class="nav-item">
+        <div class="nav-item nph">
             <a href="#dates">Important dates</a>
         </div>
-        <div class="nav-item">
+        <div class="nav-item nph">
             <a href="#org">Organizers</a>
         </div>
-        <div class="nav-item">
+        <!-- <div class="nav-item">
             <a href="http://">Past workshops</a>
-        </div>
+        </div> -->
+        <div class="nav-item"><button id="nav-btn">☰
+        </button></div>
+        <nav id="nav">
+            <ul>
+                <li>
+                    <div class="nav-item">
+                        <a href="#overview">Overview</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href="#topics">Topics</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href="#schedule">Schedule</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href="#speakers">Invited Speakers</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href="#accepted">Accepted Paper</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href="#dates">Important dates</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav-item">
+                        <a href="#org">Organizers</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <script>
+            const btn = document.getElementById('nav-btn')
+            const nav = document.getElementById('nav');
+
+            btn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                btn.classList.toggle('active');
+            })
+        </script>
     </nav>
     <div id="header">
         <img src="./images/imageonline-co-overlayed-image (3).jpg" alt="header image" id="header-image">
     <div id="header-text">
-        <h1>Workshop Name</h1>
-        <h3>Brief</h3>
-        <span>Location</span>
+        <h1 class="project-name">CLeaR 2022</h1>
+        <h3 class="project-tagline">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations</h3>
+        <h3 class="project-tagline">In conjunction with the 36th AAAI conference on artificial intelligence
+        <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+        </h3>
+        <span>Workshop Day: TBD, <br>
+            Location: TBD</span>
     </div>
     <div id="phone-header">
-        <h1>Workshop Name</h1>
-        <h3>Brief</h3>
-        <span>Location</span>
+        <h1 class="project-name">CLeaR 2022</h1>
+        <h3 class="project-tagline">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations</h3>
+        <h3 class="project-tagline">In conjunction with the 36th AAAI conference on artificial intelligence
+        <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+        </h3>
+        <span>Workshop Day: TBD, <br>
+            Location: TBD</span>
     </div>
     </div>
     
     <div id="info">
         <div id="overview">
             <h1>Overview</h1>
-            <h3>Demand for real world applications</h3>
-            <span>Nowadays, to solve real-world problems in many areas such as cognitive sciences, 
-                biology, finance, physics, social sciences, etc, scientists think about data-driven 
-                solutions to a progressively increasing extent.
-            </span>
-            <h3>Challenge for domain experts</h3>
+            <p>
+                The increased availability of data and novel machine learning methods has sparked an interest in taking learning-based and data-driven approaches in many disciplines such as biology, social sciences, cognitive science, finance, and physics. To solve real-world problems, we require  integration of AI learning paradigms to enable the incorporation of expert knowledge, and dealing with uncertainty or complex structures in learning or inference. This, in turn, leads to a long path between formulating the problem and materializing the learning algorithm. The current practice often falls short in addressing it in a principle way and led to experimentation with variety of models and algorithms. While this gap slows down the progress in the AI field, it also makes it less accessible for domain experts outside the field. This problem calls for formalisms and languages which can integrate the existing disciplines in particular the symbolic and sub-symbolic approaches for combining learning and reasoning.
+                In this workshop we look the importance of the integrative paradigms from the lens of real-world applications for making AI accessible to domain experts and provide the means for: 1. High-level and declarative expression of the problem (i.e. the user specifies what she wants to achieve rather than how to achieve it), 2. Incorporating prior knowledge(e.g. laws of physics, or certain biological properties), 3. Reasoning over uncertain data/predictions, 4. Dealing with complex structures such as graphs and relations (e.g. to represent a social network or molecule), 5. Modularity, which allows the components of a program to be easily switched or reused.
+            </p>
+            <!-- <h3>Challenge for domain experts</h3>
             <span>
                 However, current technologies offer cumbersome solutions along multiple dimensions. 
                 Some of this include, Interaction with messy naturally occurring data; Necessity for 
@@ -113,119 +180,90 @@
                 learning architectures that connect various computational units to the semantics of 
                 declarative data and knowledge representations. We also encourage submissions on learning 
                 to learn programs.
-            </span>
+            </span> -->
         </div>
         <div id="topics">
             <h1>Topics Summary</h1>
-            The main research questions and topics of interest include the following existing topics in 
-            the context of an integrated learning based paradigm: <br>
+            The main research questions and topics of interest include, but are not limited to:<br>
             <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, fuga!</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, amet!</li>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, tempore?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, tempore?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, tempore?</li>
-                <li>Lorem ipsum dolor sit amet.</li>
+                <li>Declarative and imperative languages for combining learning and reasoning</li>
+                <li>Programming Languages, Domain specific languages, Libraries and software tools for integration of various learning and reasoning paradigms</li>
+                <li>Integration of probabilistic inference in training deep models</li>
+                <li>Integration of neuro and symbolic approaches</li>
+                <li>Integration of logical inference in training deep models</li>
+                <li>Using logical inference in deep learning</li>
+                <li>Integration of Deep Learning and Relational Learning</li>
+                <li>Integration of Deep learning and Constraint programming</li>
+                <li>Declarative languages and diffrentiable programming</li>
+                <li>Techniques for integration of learning and reasoning</li>
+                <li>Integration of declarative and procedural domain knowledge in learning</li>
+                <li>Integration of non-differentiable optimization models in learning</li>
+                <li>Integration of domain knowledge about   fairness, privacy, etc in designing learning models</li>
             </ul>
         </div>
-        <div id="schedule">
-            <h1>Schedule</h1>
-            <table id="sch-table">
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-            </table>
-        </div>
-        <div id="speakers">
-            <h1>Invited Speakers</h1>
-            <button class="accordion"><strong>Speaker 1</strong> - University/Organization</button>
-            <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion"><strong>Speaker 2</strong> - University/Organization</button>
-            <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <button class="accordion"><strong>Speaker 3</strong> - University/Organization</button>
-            <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-
-            <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-
-            for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            panel.scrollIntoView();
-            }
-            });
-            }
-            </script>
-        </div>
-        <div id="papers">
-            <h1>Invited Papers</h1>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
-                </li>
-            </ul>
-        </div>
-        <div id="accepted">
-            <h1>Accepted Papers</h1>
-            <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
-                </li>
-            </ul>
-        </div>
+        
         <div id="submissions">
             <h1>Submissions</h1>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi fuga consequatur quas 
-            dolores? Iusto, nisi laudantium inventore nemo quisquam error.
+            TBD
         </div>
         <div id="dates">
             <h1>Important Dates</h1>
             <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, blanditiis?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, blanditiis?</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, blanditiis?</li>
+                <li>Submission Deadline: November 12th</li>
+                <li>Notification: December 4th</li>
+                <li>Camera Ready:  December 15th</li>
+                <li>Workshop Day:  February 28-March 1</li>
             </ul>
+            <p>
+                We are open  to the papers that have been submitted to the main conference. However, the reviews should be submitted to us and those will be quickly meta-reviewed.
+            </p>
         </div>
         <div id="org">
-            <h1>Organizer's Committee</h1>
+            <h1>Organizing Committee</h1>
             <table id="org-table">
                 <tr class="table-item">
+                    <td width="32%">
+                        <li><a href="">Parisa Kordjamshidi</a></li>
+                    </td>
+                    <td>Michigan State University, <a href="https://www.ihmc.us">IHMC</a></td>
+                    <td>kordjams@msu.edu</td>
+                </tr>
+                <tr class="table-item">
+                    <td>
+                        <li><a href="">Behrouz Babaki</a></li>
+                    </td>
+                    <td>Mila/HEC Montreal</td>
+                    <td>behrouz.babaki@mila.quebec</td>
+                </tr>
+                <tr class="table-item">
+                    <td>
+                        <li><a href="">Sebastijan Dumančić</a></li>
+                    </td>
+                    <td>KU Leuven</td>
+                    <td>sebastijan.dumancic@cs.kuleuven.be</td>
+                </tr>
+                <tr class="table-item">
+                    <td>
+                        <li><a href="">Alex Ratner</a> </li>
+                    </td>
+                    <td>University of Washington</td>
+                    <td>ajratner@cs.washington.edu</td>
+                </tr>
+                <tr class="table-item">
+                    <td>
+                        <li><a href="">Hossein Rajaby Faghihi</a></li>
+                    </td>
+                    <td>Michigan State University</td>
+                    <td>rajabyfa@msu.edu</td>
+                </tr>
+                <tr class="table-item">
+                    <td>
+                        <li><a href="">Hamid Karimian</a></li>
+                    </td>
+                    <td>Michigan State University</td>
+                    <td>karimian@msu.edu</td>
+                </tr>
+                <!-- <tr class="table-item">
                     <td>Name</td>
                     <td>University</td>
                     <td>Mail</td>
@@ -239,22 +277,15 @@
                     <td>Name</td>
                     <td>University</td>
                     <td>Mail</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr>
+                </tr> -->
             </table>
+            <p>Contact: <a href="mailto:clear-workshop@googlegroups.com?Subject=CleaR" target="_top">
+                clear-workshop@googlegroups.com</a></p>
         </div>
         <div id="prog">
             <h1>Program Committee</h1>
-            <table id="prog-table">
+            TBD
+            <!-- <table id="prog-table">
                 <tr class="table-item">
                     <td>Name</td>
                     <td>University</td>
@@ -280,11 +311,118 @@
                     <td>University</td>
                     <td>Mail</td>
                 </tr>
-            </table>
+            </table> -->
         </div>
     </div>
-    <div id="footer">
-        Some Logo
+    <!-- <div id="papers">
+        <h1>Invited Papers</h1>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
+            </li>
+        </ul>
+    </div> -->
+    <div id="accepted">
+        <h1>Accepted Papers</h1>
+        TBD
+        <!-- <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
+            </li>
+        </ul> -->
     </div>
+    <div id="schedule">
+        <h1>Schedule</h1>
+        TBD
+        <!-- <table id="sch-table">
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+        </table> -->
+    </div>
+    <div id="speakers">
+        <h1>Invited Speakers</h1>
+        TBD
+        <!-- <button class="accordion"><strong>Speaker 1</strong> - University/Organization</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion"><strong>Speaker 2</strong> - University/Organization</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <button class="accordion"><strong>Speaker 3</strong> - University/Organization</button>
+        <div class="panel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        panel.scrollIntoView();
+        }
+        });
+        }
+        </script> -->
+    </div>
+    <div id="footer">
+        <footer class="site-footer">
+
+            <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>
+              using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a
+                href="https://twitter.com/jasonlong">Jason Long</a>.
+            </span>
+        </footer>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <!-- Start of StatCounter Code for Default Guide -->
+  <script type="text/javascript">
+    var sc_project = 11083511;
+    var sc_invisible = 1;
+    var sc_security = "2f97c6cf";
+    var scJsHost = (("https:" == document.location.protocol) ?
+      "https://secure." : "http://www.");
+    document.write("<sc" + "ript type='text/javascript' src='" +
+      scJsHost +
+      "statcounter.com/counter/counter.js'></" + "script>");
+  </script>
+  <noscript>
+    <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
+          class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
+    analytics"></a></div>
+  </noscript>
+  <!-- End of StatCounter Code for Default Guide -->
 </body>
 </html>
