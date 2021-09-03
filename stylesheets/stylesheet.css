@@ -46,8 +46,8 @@ body{
 
 #nav-btn{
     position: fixed;
-    right: 1rem;
-    padding: 1rem;
+    right: 3rem;
+    padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
     display: none;
 }
@@ -60,6 +60,8 @@ body{
     height: 100vh;
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
+    display: none;
+    z-index: 5;
 }
 
 #nav ul{
@@ -76,10 +78,11 @@ body{
 
 #nav.active {
     transform: translateX(0%);
+    display: block;
 }
 
 #nav-btn.active {
-    transform: translateX(-180px);
+    transform: translateX(-150px);
 }
 
 #navbar a{
@@ -110,16 +113,7 @@ a{
 
 @media only screen and (max-width: 900px){
     #navbar{
-        display: flex;
-        flex-direction: row;
-        position: fixed;
-        top: 0;
-        left: auto;
-        background-color: black;
-        color: white;
-        width: 100%;
-        flex-wrap: wrap;
-        z-index: 5;
+        display: none;
     }
     .nav-item{
         padding: 0.5rem;
@@ -128,7 +122,7 @@ a{
         position: relative;
         top: 4rem;
         z-index: 0;
-        width: 100%;
+        width: 90%;
         height: auto;
     }
     #header-text{
@@ -150,6 +144,13 @@ a{
     }
     .nph{
         display: none;
+    }
+    body{
+        text-align: center;
+        justify-content: center;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.8rem;
+        max-width: 90%;
     }
 }
 
@@ -233,4 +234,13 @@ ul li{
 #footer{
     margin: 2rem auto;
     font-size: 0.8rem;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#org{
+    overflow-x: auto;
 }
