@@ -55,7 +55,7 @@ body{
 #nav-btn{
     position: fixed;
     top: 0.5rem;
-    right: 3rem;
+    right: 2rem;
     padding: 0.5rem;
     transition: transform 0.3s ease-in-out;
     display: none;
@@ -141,7 +141,7 @@ a:hover{
     }
     #header-image{
         position: relative;
-        top: 4rem;
+        top: 3rem;
         z-index: 0;
         width: 100%;
         height: auto;
