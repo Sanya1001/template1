@@ -135,7 +135,6 @@ a:hover{
     /* border: solid; */
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(225, 231, 226);
 }
 
 #info-nph{
@@ -148,6 +147,10 @@ a:hover{
 
 #org li, #prog li{
     text-align: left;
+}
+
+#overview{
+    background-color: rgb(225, 231, 226);
 }
 
 @media only screen and (max-width: 549px){
@@ -197,7 +200,6 @@ a:hover{
     #info{
         justify-content: center;
         margin-top: 0;
-        background-color: rgb(225, 231, 226);
     }
 }
 
@@ -222,7 +224,6 @@ a:hover{
         /* border: solid; */
         margin-left: 30vw;
         margin-right: auto;
-        background-color: rgb(225, 231, 226);
     }
 }
 
@@ -235,7 +236,6 @@ a:hover{
         /* border: solid; */
         margin-left: 18vw;
         margin-right: auto;
-        background-color: rgb(225, 231, 226);
     }
     body{
         text-align: center;
