@@ -22,7 +22,7 @@ body{
 }
 
 #header-text h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #header-text{
@@ -31,7 +31,11 @@ body{
     text-align: center;
     justify-content: center;
     position: relative;
-    top: -8rem;
+    top: -12rem;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.7rem;
 }
 
 a{
@@ -130,15 +134,16 @@ a:hover{
 #info{
     justify-content: center;
     text-align: center;
-    margin-top: -5rem;
+    margin-top: -10rem;
     max-width: 1024px;
     /* border: solid; */
     margin-left: auto;
     margin-right: auto;
 }
 
-#info-nph{
+#info-nph2{
     font-size: 0.8rem;
+    display: none;
 }
 
 #topics ul li{
@@ -154,6 +159,9 @@ a:hover{
 }
 
 @media only screen and (max-width: 549px){
+    #info-nph1{
+        display: none;
+    }
     #navbar{
         display: none;
     }
@@ -203,10 +211,17 @@ a:hover{
     }
 }
 
-@media only screen and (max-width: 910px) and (min-width: 550px){
-
+@media only screen and (max-width: 970px) and (min-width: 550px){
+    #info-nph1{
+        display: none;
+    }
+    #info-nph2{
+        font-size: 0.8rem;
+        display: block;
+        padding-top: 1rem;
+    }
     #header-text h1{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     #header-text{
         color: white;
@@ -215,6 +230,10 @@ a:hover{
         justify-content: center;
         position: relative;
         top: -5rem;
+        max-width: 1024px;
+        margin-left: 30vw;
+        margin-right: auto;
+        font-size: 0.6rem;
     }
     #info{
         justify-content: center;
@@ -227,11 +246,14 @@ a:hover{
     }
 }
 
-@media only screen and (max-width: 1500px) and (min-width: 911px){
+@media only screen and (max-width: 1200px) and (min-width: 971px){
+    #header-text h1{
+        font-size: 1.6rem;
+    }
     #info{
         justify-content: center;
         text-align: center;
-        margin-top: -5rem;
+        margin-top: -10rem;
         max-width: 1024px;
         /* border: solid; */
         margin-left: 18vw;
@@ -242,6 +264,51 @@ a:hover{
         justify-content: center;
         font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 0.9rem;
+    }
+    #header-text{
+        color: white;
+        z-index: 2;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        top: -10rem;
+        max-width: 1024px;
+        margin-left: 18vw;
+        margin-right: auto;
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (min-width: 1201px){
+    #header-text h1{
+        font-size: 1.7rem;
+    }
+    #info{
+        justify-content: center;
+        text-align: center;
+        margin-top: -10rem;
+        max-width: 1024px;
+        /* border: solid; */
+        margin-left: 18vw;
+        margin-right: auto;
+    }
+    body{
+        text-align: center;
+        justify-content: center;
+        font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 0.9rem;
+    }
+    #header-text{
+        color: white;
+        z-index: 2;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+        top: -12rem;
+        max-width: 1024px;
+        margin-left: 18vw;
+        margin-right: auto;
+        font-size: 0.7rem;
     }
 }
 
