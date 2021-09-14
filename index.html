@@ -4,475 +4,375 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen"> -->
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
     <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
     <!-- Latest compiled and minified CSS -->
     <title>CLeaR 2022</title>
 </head>
-<body id="main">
-    <div class="nav-item"><button id="nav-btn">☰
-    </button></div>
-    <nav id="nav">
+<body>
+    <!-- Bootstrap Static Header -->
+<div style="background: url(images/imageonline-co-overlayed-image\ \(1\).jpg)" class="jumbotron bg-cover text-white">
+    <div class="container py-5 text-center">
+        <h1 class="display-4 font-weight-bold">CLeaR 2022</h1>
+        <p class="font-italic mb-0">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations
+            <br>
+            In conjunction with the 36th AAAI conference on artificial intelligence
+            <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+        </p>
+        <p class="font-italic"><span>Workshop Day: TBD, <br>
+            Location: TBD</span>
+        </p>
+    </div>
+</div>
+<nav class="nav flex-column">
+    <a class="nav-link active" aria-current="page" href="#">Overview</a>
+    <a class="nav-link" href="#">Topics</a>
+    <a class="nav-link" href="#">Schedule</a>
+    <a class="nav-link" href="#">Invited Speakers</a>
+    <a class="nav-link" href="#">Accepted Papers</a>
+    <a class="nav-link" href="#">Important Dates</a>
+    <a class="nav-link" href="#">Organizers</a>
+    <!-- <a class="nav-link" href="#">Link</a> -->
+</nav>
+<div id="info">
+    <div id="overview">
+        <h1>Overview</h1>
+        <p>
+            The increased availability of data and novel machine learning methods has sparked an interest in taking learning-based and data-driven approaches in many disciplines such as biology, social sciences, cognitive science, finance, and physics. To solve real-world problems, we require  integration of AI learning paradigms to enable the incorporation of expert knowledge, and dealing with uncertainty or complex structures in learning or inference. This, in turn, leads to a long path between formulating the problem and materializing the learning algorithm. The current practice often falls short in addressing it in a principle way and led to experimentation with variety of models and algorithms. While this gap slows down the progress in the AI field, it also makes it less accessible for domain experts outside the field. This problem calls for formalisms and languages which can integrate the existing disciplines in particular the symbolic and sub-symbolic approaches for combining learning and reasoning.
+            In this workshop we look the importance of the integrative paradigms from the lens of real-world applications for making AI accessible to domain experts and provide the means for: 1. High-level and declarative expression of the problem (i.e. the user specifies what she wants to achieve rather than how to achieve it), 2. Incorporating prior knowledge(e.g. laws of physics, or certain biological properties), 3. Reasoning over uncertain data/predictions, 4. Dealing with complex structures such as graphs and relations (e.g. to represent a social network or molecule), 5. Modularity, which allows the components of a program to be easily switched or reused.
+        </p>
+        <!-- <h3>Challenge for domain experts</h3>
+        <span>
+            However, current technologies offer cumbersome solutions along multiple dimensions. 
+            Some of this include, Interaction with messy naturally occurring data; Necessity for 
+            extensive programming; Necessity of exploiting various learning paradigms and techniques; 
+            and Extensive experimental exploration for model selection, feature selection, parameter 
+            tuning due to the lack of theoretical evidence about the effectiveness of various models.
+        </span>
+        <h3>High-level goal and implied directions</h3>
+        <span>
+            <p>
+                DeLBP workshop aims at highlighting the issues and challenges that arise for having a 
+            declarative data driven problem-solving paradigm. This paradigm facilitates and simplifies 
+            the design and the development of intelligent real world applications that consider 
+            learning from data and reasoning based on knowledge. It highlights the challenges in 
+            making machine learning accessible to various domain experts and application programmers.
+            </p>
+            <p>
+                Conventional programming languages have not been primarily designed to offer help for the 
+            above-mentioned challenges. To Achieve the DeLBP goals there is a need to go beyond designing 
+            tools for classic machine learning new innovative abstractions and enriching the existing solutions 
+            and frameworks with the capabilities in:
+            </p>
+            <p>
+                Specifying the requirements of the application at a high abstraction level; 
+                Exploiting the expert knowledge in learning; Dealing with uncertainty in data 
+                and knowledge in various layers of the application program; Using representations 
+                that support flexible relational feature engineering; Using representations that 
+                support flexible reasoning and structure learning; Ability to reuse, combining and 
+                chaining models and perform flexible inference on complex models or pipelines of 
+                decision making; Integrating a range of learning and inference algorithms; Closing 
+                the loop of moving from data to knowledge and exploiting knowledge to generate data; 
+                and finally having a unified programming environment to design application programs.
+            </p>
+        </span>
+        <h3>Related communities</h3>
+        <span>
+            Over the last few years the research community has tried to address these problems 
+            from multiple perspectives, most notably various approaches based on Probabilistic 
+            programming (PP), Logical Programming (LP), Constrained Conditional models (CCM) and 
+            other integrated paradigms such as Probabilistic Logical Programming (PLP) and Statistical 
+            relational learning (SRL). These paradigms and related languages aim at learning over 
+            probabilistic structures and exploiting knowledge in learning. Moreover, in the recent 
+            years several Deep Learning tools have created easy to use abstractions for programming 
+            model configurations for deep architectures. We aim at motivating the need for further 
+            research toward a unified framework in this area based on the above mentioned key existing 
+            paradigms as well as other related research such as First-order query languages, database 
+            management systems (DBMS), deductive databases (DDB), hybrid optimization and deep 
+            architectures for learning from data and knowledge. We are interested in connecting these 
+            ideas towards developing a Declarative Learning Based Programming Paradigm and investigate 
+            the required type of languages, representations and computational models to support such a 
+            paradigm.
+        </span>
+        <h3>Highlight</h3>
+        <span>
+            Though the theme of this workshop remains generic as in the past versions, we will 
+            aim at emphasizing on ideas and opinions regarding conceptual representations of deep 
+            learning architectures that connect various computational units to the semantics of 
+            declarative data and knowledge representations. We also encourage submissions on learning 
+            to learn programs.
+        </span> -->
+    </div>
+    <div id="topics">
+        <h1>Topics Summary</h1>
+        The main research questions and topics of interest include, but are not limited to:<br>
         <ul>
-            <li>
-                <div class="nav-item">
-                    <a href="#overview">Overview</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item">
-                    <a href="#topics">Topics</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item">
-                    <a href="#schedule">Schedule</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item">
-                    <a href="#speakers">Invited Speakers</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item">
-                    <a href="#accepted">Accepted Paper</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item">
-                    <a href="#dates">Important dates</a>
-                </div>
-            </li>
-            <li>
-                <div class="nav-item">
-                    <a href="#org">Organizers</a>
-                </div>
-            </li>
+            <li>Declarative and imperative languages for combining learning and reasoning</li>
+            <li>Programming Languages, Domain specific languages, Libraries and software tools for integration of various learning and reasoning paradigms</li>
+            <li>Integration of probabilistic inference in training deep models</li>
+            <li>Integration of neuro and symbolic approaches</li>
+            <li>Integration of logical inference in training deep models</li>
+            <li>Using logical inference in deep learning</li>
+            <li>Integration of Deep Learning and Relational Learning</li>
+            <li>Integration of Deep learning and Constraint programming</li>
+            <li>Declarative languages and diffrentiable programming</li>
+            <li>Techniques for integration of learning and reasoning</li>
+            <li>Integration of declarative and procedural domain knowledge in learning</li>
+            <li>Integration of non-differentiable optimization models in learning</li>
+            <li>Integration of domain knowledge about   fairness, privacy, etc in designing learning models</li>
         </ul>
-    </nav>
-    <script>
-        const btn = document.getElementById('nav-btn')
-        const nav = document.getElementById('nav');
+    </div>
+    <div id="submissions">
+        <h1>Submissions</h1>
+        TBD
+    </div>
+    <div id="dates">
+        <h1>Important Dates</h1>
+        <table id="date-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item table">
+                <td><strong>Name</strong></td>
+                <td><strong>Date</strong></td>
+            </tr>
+            <tr class="table-item">
+                <td>Submission Deadline</td>
+                <td>November 12, 2021</td>
+            </tr>
+            <tr class="table-item">
+                <td>Notification</td>
+                <td>December 4, 2021</td>
+            </tr>
+            <tr class="table-item">
+                <td>Camera Ready</td>
+                <td>December 15, 2021</td>
+            </tr>
+            <tr class="table-item">
+                <td>Workshop Day</td>
+                <td>February 28-March 1, 2022</td>
+            </tr>
+            <!-- <tr class="table-item">
+                <td></td>
+                <td></td>
+            </tr> -->
+        </table>
+        <p>
+            We are open  to the papers that have been submitted to the main conference. However, the reviews should be submitted to us and those will be quickly meta-reviewed.
+        </p>
+    </div>
+    <div id="speakers">
+        <h1>Invited Speakers</h1>
+        <div class="row row-cols-1 row-cols-md-2 g-4 h-100">
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/msu1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a small card</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/msu1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/msu1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="images/msu1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div id="org">
+        <h1>Organizing Committee</h1>
+        <table id="org-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item">
+                <td width="32%">
+                    <li><a href="">Parisa Kordjamshidi</a></li>
+                </td>
+                <td>Michigan State University, <a href="https://www.ihmc.us">IHMC</a></td>
+                <td>kordjams@msu.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Behrouz Babaki</a></li>
+                </td>
+                <td>Mila/HEC Montreal</td>
+                <td>behrouz.babaki@mila.quebec</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Sebastijan Dumančić</a></li>
+                </td>
+                <td>KU Leuven</td>
+                <td>sebastijan.dumancic@cs.kuleuven.be</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Alex Ratner</a> </li>
+                </td>
+                <td>University of Washington</td>
+                <td>ajratner@cs.washington.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Hossein Rajaby Faghihi</a></li>
+                </td>
+                <td>Michigan State University</td>
+                <td>rajabyfa@msu.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Hamid Karimian</a></li>
+                </td>
+                <td>Michigan State University</td>
+                <td>karimian@msu.edu</td>
+            </tr>
+            <!-- <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr> -->
+        </table>
+        <p>Contact: <a href="mailto:clear-workshop@googlegroups.com?Subject=CleaR" target="_top">
+            clear-workshop@googlegroups.com</a></p>
+    </div>
+    <div id="prog">
+        <h1>Advising Committee</h1>
+        <!-- TBD -->
+        <table id="prog-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Dan Roth</a></li>
+                </td>
+                <td>University of Pennsylvania</td>
+                <td>danroth@seas.upenn.edu</td>
+            </tr>
+            <tr class="table-item">
+                <td>
+                    <li><a href="">Guy Van Den Broeck</a></li>
+                </td>
+                <td>University of California Los Angeles</td>
+                <td>guyvdb@cs.ucla.edu</td>
+            </tr>
+            <!-- <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr>
+            <tr class="table-item">
+                <td>Name</td>
+                <td>University</td>
+                <td>Mail</td>
+            </tr> -->
+        </table>
+    </div>
+    <div id="accepted">
+        <h1>Accepted Papers</h1>
+        TBD
+        <!-- <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
+            </li>
+        </ul> -->
+    </div>
+    <div id="schedule">
+        <h1>Schedule</h1>
+        TBD
+        <!-- <table id="sch-table">
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+            <tr class="table-item">
+                <td>Time</td>
+                <td>Name</td>
+                <td>Topic</td>
+            </tr>
+        </table> -->
+    </div> <br>
+    <div id="sponsor">
+        <span class="sponsor-item">Sponsored by &nbsp; </span>
+        <img src="images/msu1.jpg" alt="sponsor logo" id="sponsor-logo" class="sponsor-item">
+        &nbsp;<a href="http://" class="sponsor-item">Company Name</a>
+    </div>
+    <div id="footer">
+        <footer class="site-footer">
 
-        btn.addEventListener('click', () => {
-            nav.classList.toggle('active');
-            btn.classList.toggle('active');
-        })
+            <span class="site-footer-credits">This page was generated by 
+                <a href="https://pages.github.com">GitHub Pages</a>.
+            </span>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+    var sc_project = 11083511;
+    var sc_invisible = 1;
+    var sc_security = "2f97c6cf";
+    var scJsHost = (("https:" == document.location.protocol) ?
+      "https://secure." : "http://www.");
+    document.write("<sc" + "ript type='text/javascript' src='" +
+      scJsHost +
+      "statcounter.com/counter/counter.js'></" + "script>");
     </script>
-    <div id="header">
-        <img src="./images/imageonline-co-overlayed-image (1).jpg" alt="header image" id="header-image">
-        <div id="header-text">
-        <h1 class="project-name">CLeaR 2022</h1>
-        <div id="info-nph1" class="nph">
-            <h3 class="project-tagline">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations</h3>
-            <h3 class="project-tagline">In conjunction with the 36th AAAI conference on artificial intelligence
-            <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
-            </h3>
-            <span>Workshop Day: TBD, <br>
-            Location: TBD</span>
-        </div>
-        </div>
-        <div id="phone-header">
-            <h1 class="project-name">CLeaR 2022</h1>
-            <h3 class="project-tagline">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations</h3>
-            <h3 class="project-tagline">In conjunction with the 36th AAAI conference on artificial intelligence
-            <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
-            </h3>
-            <span>Workshop Day: TBD, <br>
-                Location: TBD</span>
-        </div>
-    </div>
-    <nav id="navbar">
-        <div class="nav-item nph" id="navitem1">
-            <a href="#overview">Overview</a>
-        </div>
-        <div class="nav-item nph">
-            <a href="#topics">Topics</a>
-        </div>
-        <div class="nav-item nph">
-            <a href="#schedule">Schedule</a>
-        </div>
-        <div class="nav-item nph">
-            <a href="#speakers">Invited Speakers</a>
-        </div>
-        <!-- <div class="nav-item">
-            <a href="#papers">Submissions</a>
-        </div> -->
-        <div class="nav-item nph">
-            <a href="#accepted">Accepted Paper</a>
-        </div>
-        <div class="nav-item nph">
-            <a href="#dates">Important dates</a>
-        </div>
-        <div class="nav-item nph">
-            <a href="#org">Organizers</a>
-        </div>
-        <!-- <div class="nav-item">
-            <a href="http://">Past workshops</a>
-        </div> -->
-        
-    </nav>
-    <div id="info">
-        <div id="info-nph2" class="nph">
-            <h3 class="project-tagline">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations</h3>
-            <h3 class="project-tagline">In conjunction with the 36th AAAI conference on artificial intelligence
-            <a href="https://ijcai19.org">(AAAI-2022)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
-            </h3>
-            <span>Workshop Day: TBD, <br>
-            Location: TBD</span>
-        </div>
-        <div id="overview">
-            <h1>Overview</h1>
-            <p>
-                The increased availability of data and novel machine learning methods has sparked an interest in taking learning-based and data-driven approaches in many disciplines such as biology, social sciences, cognitive science, finance, and physics. To solve real-world problems, we require  integration of AI learning paradigms to enable the incorporation of expert knowledge, and dealing with uncertainty or complex structures in learning or inference. This, in turn, leads to a long path between formulating the problem and materializing the learning algorithm. The current practice often falls short in addressing it in a principle way and led to experimentation with variety of models and algorithms. While this gap slows down the progress in the AI field, it also makes it less accessible for domain experts outside the field. This problem calls for formalisms and languages which can integrate the existing disciplines in particular the symbolic and sub-symbolic approaches for combining learning and reasoning.
-                In this workshop we look the importance of the integrative paradigms from the lens of real-world applications for making AI accessible to domain experts and provide the means for: 1. High-level and declarative expression of the problem (i.e. the user specifies what she wants to achieve rather than how to achieve it), 2. Incorporating prior knowledge(e.g. laws of physics, or certain biological properties), 3. Reasoning over uncertain data/predictions, 4. Dealing with complex structures such as graphs and relations (e.g. to represent a social network or molecule), 5. Modularity, which allows the components of a program to be easily switched or reused.
-            </p>
-            <!-- <h3>Challenge for domain experts</h3>
-            <span>
-                However, current technologies offer cumbersome solutions along multiple dimensions. 
-                Some of this include, Interaction with messy naturally occurring data; Necessity for 
-                extensive programming; Necessity of exploiting various learning paradigms and techniques; 
-                and Extensive experimental exploration for model selection, feature selection, parameter 
-                tuning due to the lack of theoretical evidence about the effectiveness of various models.
-            </span>
-            <h3>High-level goal and implied directions</h3>
-            <span>
-                <p>
-                    DeLBP workshop aims at highlighting the issues and challenges that arise for having a 
-                declarative data driven problem-solving paradigm. This paradigm facilitates and simplifies 
-                the design and the development of intelligent real world applications that consider 
-                learning from data and reasoning based on knowledge. It highlights the challenges in 
-                making machine learning accessible to various domain experts and application programmers.
-                </p>
-                <p>
-                    Conventional programming languages have not been primarily designed to offer help for the 
-                above-mentioned challenges. To Achieve the DeLBP goals there is a need to go beyond designing 
-                tools for classic machine learning new innovative abstractions and enriching the existing solutions 
-                and frameworks with the capabilities in:
-                </p>
-                <p>
-                    Specifying the requirements of the application at a high abstraction level; 
-                    Exploiting the expert knowledge in learning; Dealing with uncertainty in data 
-                    and knowledge in various layers of the application program; Using representations 
-                    that support flexible relational feature engineering; Using representations that 
-                    support flexible reasoning and structure learning; Ability to reuse, combining and 
-                    chaining models and perform flexible inference on complex models or pipelines of 
-                    decision making; Integrating a range of learning and inference algorithms; Closing 
-                    the loop of moving from data to knowledge and exploiting knowledge to generate data; 
-                    and finally having a unified programming environment to design application programs.
-                </p>
-            </span>
-            <h3>Related communities</h3>
-            <span>
-                Over the last few years the research community has tried to address these problems 
-                from multiple perspectives, most notably various approaches based on Probabilistic 
-                programming (PP), Logical Programming (LP), Constrained Conditional models (CCM) and 
-                other integrated paradigms such as Probabilistic Logical Programming (PLP) and Statistical 
-                relational learning (SRL). These paradigms and related languages aim at learning over 
-                probabilistic structures and exploiting knowledge in learning. Moreover, in the recent 
-                years several Deep Learning tools have created easy to use abstractions for programming 
-                model configurations for deep architectures. We aim at motivating the need for further 
-                research toward a unified framework in this area based on the above mentioned key existing 
-                paradigms as well as other related research such as First-order query languages, database 
-                management systems (DBMS), deductive databases (DDB), hybrid optimization and deep 
-                architectures for learning from data and knowledge. We are interested in connecting these 
-                ideas towards developing a Declarative Learning Based Programming Paradigm and investigate 
-                the required type of languages, representations and computational models to support such a 
-                paradigm.
-            </span>
-            <h3>Highlight</h3>
-            <span>
-                Though the theme of this workshop remains generic as in the past versions, we will 
-                aim at emphasizing on ideas and opinions regarding conceptual representations of deep 
-                learning architectures that connect various computational units to the semantics of 
-                declarative data and knowledge representations. We also encourage submissions on learning 
-                to learn programs.
-            </span> -->
-        </div>
-        <div id="topics">
-            <h1>Topics Summary</h1>
-            The main research questions and topics of interest include, but are not limited to:<br>
-            <ul>
-                <li>Declarative and imperative languages for combining learning and reasoning</li>
-                <li>Programming Languages, Domain specific languages, Libraries and software tools for integration of various learning and reasoning paradigms</li>
-                <li>Integration of probabilistic inference in training deep models</li>
-                <li>Integration of neuro and symbolic approaches</li>
-                <li>Integration of logical inference in training deep models</li>
-                <li>Using logical inference in deep learning</li>
-                <li>Integration of Deep Learning and Relational Learning</li>
-                <li>Integration of Deep learning and Constraint programming</li>
-                <li>Declarative languages and diffrentiable programming</li>
-                <li>Techniques for integration of learning and reasoning</li>
-                <li>Integration of declarative and procedural domain knowledge in learning</li>
-                <li>Integration of non-differentiable optimization models in learning</li>
-                <li>Integration of domain knowledge about   fairness, privacy, etc in designing learning models</li>
-            </ul>
-        </div>
-        <div id="submissions">
-            <h1>Submissions</h1>
-            TBD
-        </div>
-        <div id="dates">
-            <h1>Important Dates</h1>
-            <table id="date-table" class="scrollmenu">
-                <tr class="table-item">
-                    <td><strong>Name</strong></td>
-                    <td><strong>Date</strong></td>
-                </tr>
-                <tr class="table-item">
-                    <td>Submission Deadline</td>
-                    <td>November 12, 2021</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Notification</td>
-                    <td>December 4, 2021</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Camera Ready</td>
-                    <td>December 15, 2021</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Workshop Day</td>
-                    <td>February 28-March 1, 2022</td>
-                </tr>
-                <!-- <tr class="table-item">
-                    <td></td>
-                    <td></td>
-                </tr> -->
-            </table>
-            <p>
-                We are open  to the papers that have been submitted to the main conference. However, the reviews should be submitted to us and those will be quickly meta-reviewed.
-            </p>
-        </div>
-        <div id="speakers">
-            <h1>Invited Speakers</h1>
-            <!-- TBD -->
-            <div id="spk-flex">
-                <div class="speaker-item">
-                    <img src="images/msu1.jpg" alt="profile picture" class="speakers"><br>
-                    <a href="http://">Name</a>
-                    <a href="http://">Link/ Mail</a> <br>
-                    <span class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Rerum saepe deleniti dolorum illo perspiciatis provident nemo praesentium 
-                    possimus id. Voluptate!
-                    </span>
-                </div>
-                <div class="speaker-item">
-                    <img src="images/msu1.jpg" alt="profile picture" class="speakers"><br>
-                    <a href="http://">Name</a>
-                    <a href="http://">Link/ Mail</a> <br>
-                    <span class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Rerum saepe deleniti dolorum illo perspiciatis provident nemo praesentium 
-                    possimus id. Voluptate!
-                    </span>
-                </div>
-            </div>
-            <!-- <button class="accordion"><strong>Speaker 1</strong> - University/Organization</button>
-            <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-    
-            <button class="accordion"><strong>Speaker 2</strong> - University/Organization</button>
-            <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-    
-            <button class="accordion"><strong>Speaker 3</strong> - University/Organization</button>
-            <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-    
-            <script>
-            var acc = document.getElementsByClassName("accordion");
-            var i;
-    
-            for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.display === "block") {
-            panel.style.display = "none";
-            } else {
-            panel.style.display = "block";
-            panel.scrollIntoView();
-            }
-            });
-            }
-            </script> -->
-        </div>
-        <div id="org">
-            <h1>Organizing Committee</h1>
-            <table id="org-table" class="scrollmenu">
-                <tr class="table-item">
-                    <td width="32%">
-                        <li><a href="">Parisa Kordjamshidi</a></li>
-                    </td>
-                    <td>Michigan State University, <a href="https://www.ihmc.us">IHMC</a></td>
-                    <td>kordjams@msu.edu</td>
-                </tr>
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Behrouz Babaki</a></li>
-                    </td>
-                    <td>Mila/HEC Montreal</td>
-                    <td>behrouz.babaki@mila.quebec</td>
-                </tr>
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Sebastijan Dumančić</a></li>
-                    </td>
-                    <td>KU Leuven</td>
-                    <td>sebastijan.dumancic@cs.kuleuven.be</td>
-                </tr>
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Alex Ratner</a> </li>
-                    </td>
-                    <td>University of Washington</td>
-                    <td>ajratner@cs.washington.edu</td>
-                </tr>
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Hossein Rajaby Faghihi</a></li>
-                    </td>
-                    <td>Michigan State University</td>
-                    <td>rajabyfa@msu.edu</td>
-                </tr>
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Hamid Karimian</a></li>
-                    </td>
-                    <td>Michigan State University</td>
-                    <td>karimian@msu.edu</td>
-                </tr>
-                <!-- <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr> -->
-            </table>
-            <p>Contact: <a href="mailto:clear-workshop@googlegroups.com?Subject=CleaR" target="_top">
-                clear-workshop@googlegroups.com</a></p>
-        </div>
-        <div id="prog">
-            <h1>Advising Committee</h1>
-            <!-- TBD -->
-            <table id="prog-table" class="scrollmenu">
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Dan Roth</a></li>
-                    </td>
-                    <td>University of Pennsylvania</td>
-                    <td>danroth@seas.upenn.edu</td>
-                </tr>
-                <tr class="table-item">
-                    <td>
-                        <li><a href="">Guy Van Den Broeck</a></li>
-                    </td>
-                    <td>University of California Los Angeles</td>
-                    <td>guyvdb@cs.ucla.edu</td>
-                </tr>
-                <!-- <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Name</td>
-                    <td>University</td>
-                    <td>Mail</td>
-                </tr> -->
-            </table>
-        </div>
-        <div id="accepted">
-            <h1>Accepted Papers</h1>
-            TBD
-            <!-- <ul>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, asperiores.
-                </li>
-            </ul> -->
-        </div>
-        <div id="schedule">
-            <h1>Schedule</h1>
-            TBD
-            <!-- <table id="sch-table">
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-                <tr class="table-item">
-                    <td>Time</td>
-                    <td>Name</td>
-                    <td>Topic</td>
-                </tr>
-            </table> -->
-        </div> <br>
-        <div id="sponsor">
-            <span class="sponsor-item">Sponsored by &nbsp; </span>
-            <img src="images/msu1.jpg" alt="sponsor logo" id="sponsor-logo" class="sponsor-item">
-            &nbsp;<a href="http://" class="sponsor-item">Company Name</a>
-        </div>
-        <div id="footer">
-            <footer class="site-footer">
-    
-                <span class="site-footer-credits">This page was generated by 
-                    <a href="https://pages.github.com">GitHub Pages</a>.
-                </span>
-            </footer>
-        </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <!-- Start of StatCounter Code for Default Guide -->
-        <script type="text/javascript">
-        var sc_project = 11083511;
-        var sc_invisible = 1;
-        var sc_security = "2f97c6cf";
-        var scJsHost = (("https:" == document.location.protocol) ?
-          "https://secure." : "http://www.");
-        document.write("<sc" + "ript type='text/javascript' src='" +
-          scJsHost +
-          "statcounter.com/counter/counter.js'></" + "script>");
-        </script>
-        <noscript>
-        <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
-              class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
-        analytics"></a></div>
-        </noscript>
-        <!-- End of StatCounter Code for Default Guide -->
-    </div>
+    <noscript>
+    <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
+          class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
+    analytics"></a></div>
+    </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</div>
 </body>
 </html>
+
