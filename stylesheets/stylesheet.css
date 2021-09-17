@@ -19,6 +19,7 @@ body{
 
 #main{
     margin: auto 1rem;
+    justify-content: left;
 }
 
 #header{
