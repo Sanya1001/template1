@@ -160,7 +160,7 @@ table{
 
 #sponsor-logo{
     height: 100px;
-    width: 250px;
+    width: 150px;
 }
 
 #sponsor{
@@ -168,7 +168,7 @@ table{
     flex-direction: column;
     justify-content: left;
     align-items: left;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -176,6 +176,10 @@ table{
     margin: 2rem auto;
     font-size: 0.7rem;
     text-align: center;
+}
+
+#footer-text{
+    font-size: 1.2rem;
 }
 
 @media only screen and (max-width: 549px){
