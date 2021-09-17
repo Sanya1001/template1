@@ -246,3 +246,8 @@ table{
 #overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
     margin-top: 2rem;
 }
+
+.col .card .card-body{
+    width: 100%;
+    text-align: left;
+}
