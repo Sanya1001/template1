@@ -12,8 +12,8 @@
 }
 
 body{
-    text-align: center;
-    justify-content: center;
+    text-align: left;
+    justify-content: left;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -114,8 +114,8 @@ body{
 }
 
 #info{
-    justify-content: center;
-    text-align: center;
+    justify-content: left;
+    text-align: left;
     /* margin-top: -10rem; */
     max-width: 1024px;
     /* border: solid; */
@@ -149,8 +149,8 @@ table{
 }
 
 #speakers{
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
 }
 
 #sponsor-logo{
@@ -162,8 +162,8 @@ table{
 #sponsor{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-size: 1rem;
     font-weight: bold;
 }
@@ -187,8 +187,8 @@ table{
 
 @media only screen and (max-width: 970px) and (min-width: 550px){
     #info{
-        justify-content: center;
-        text-align: center;
+        justify-content: left;
+        text-align: left;
         /* margin-top: -5rem; */
         max-width: 1024px;
         /* border: solid; */
@@ -203,8 +203,8 @@ table{
 
 @media only screen and (max-width: 1350px) and (min-width: 971px){
     #info{
-        justify-content: center;
-        text-align: center;
+        justify-content: left;
+        text-align: left;
         /* margin-top: -10rem; */
         max-width: 1024px;
         /* border: solid; */
@@ -232,3 +232,17 @@ table{
         margin-right: auto;
     }
 } */
+
+.col .spk{
+    height: 250px;
+    width: 300px;
+}
+
+.col .card{
+    justify-content: center;
+    align-items: center;
+}
+
+#overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
+    margin-top: 2rem;
+}
