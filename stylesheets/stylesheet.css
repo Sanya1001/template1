@@ -17,6 +17,10 @@ body{
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+#main{
+    margin: auto 1rem;
+}
+
 #header{
     margin-left: auto;
     margin-right: auto;
