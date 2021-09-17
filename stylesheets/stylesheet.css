@@ -159,23 +159,23 @@ table{
 }
 
 #sponsor-logo{
-    height: 50px;
-    width: 50px;
-    border-radius: 25px;
+    height: 100px;
+    width: 250px;
 }
 
 #sponsor{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
     align-items: left;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 #footer{
     margin: 2rem auto;
     font-size: 0.7rem;
+    text-align: center;
 }
 
 @media only screen and (max-width: 549px){
@@ -239,13 +239,14 @@ table{
 } */
 
 .col .spk{
-    height: 250px;
+    height: 300px;
     width: 300px;
 }
 
 .col .card{
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
@@ -254,5 +255,5 @@ table{
 
 .col .card .card-body{
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
