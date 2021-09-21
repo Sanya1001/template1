@@ -211,6 +211,7 @@ table{
         max-height: 250pt;
         width: auto;
         margin-right: auto;
+        border-radius: 125pt;
     }
     #spk-flex .col .card.h-100{
         display: flex;
@@ -242,6 +243,7 @@ table{
         max-height: 250pt;
         width: auto;
         margin-right: auto;
+        border-radius: 125pt;
     }
     #spk-flex .col .card.h-100{
         display: flex;
