@@ -196,6 +196,55 @@ table{
     font-size: 1.2rem;
 }
 
+.col .spk{
+    padding: 0.8rem;
+    height: auto;
+    width: auto;
+    max-height: 150pt;
+    margin-left: auto;
+    /* border: solid; */
+}
+
+.col .card{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
+    margin-top: 2rem;
+}
+
+.col .card .card-body{
+    text-align: center;
+}
+
+.card-body .card-text {
+    text-align: left;
+}
+
+#spk-flex .col .card.h-100{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: inherit;
+    height: auto;
+}
+
+.col{
+    min-width: 100%;
+} 
+
+.intro{
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: auto;
+}
+
 @media only screen and (max-width: 549px){
     #navbar.nph{
         display: none;
@@ -207,14 +256,14 @@ table{
         margin-top: 2rem;
     }
     .col .spk{
-        height: 250pt;
-        width: 250pt;
+        padding: 0.8rem;
+        height: 150pt;
+        width: 150pt;
         margin-right: auto;
     }
     #spk-flex .col .card.h-100{
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         min-width: inherit;
@@ -237,8 +286,9 @@ table{
         margin-right: auto;
     }
     .col .spk{
-        height: 250pt;
-        width: 250pt;
+        padding: 0.8rem;
+        height: 150pt;
+        width: 150pt;
         margin-right: auto;
     }
     #spk-flex .col .card.h-100{
@@ -284,43 +334,3 @@ table{
     }
 } */
 
-.col .spk{
-    height: auto;
-    width: auto;
-    max-height: 180pt;
-    margin-left: auto;
-    /* border: solid; */
-}
-
-.col .card{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* border: solid; */
-}
-
-#overview, #topics, #speakers, #submissions, #dates, #org, #prog, #accepted, #schedule, #sponsor{
-    margin-top: 2rem;
-}
-
-.col .card .card-body{
-    text-align: center;
-    /* border: solid; */
-}
-
-.card-body .card-text {
-    text-align: left;
-}
-
-#spk-flex .col .card.h-100{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-width: inherit;
-    height: auto;
-}
-
-.col{
-    min-width: 100%;
-}
