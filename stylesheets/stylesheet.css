@@ -207,9 +207,8 @@ table{
         margin-top: 2rem;
     }
     .col .spk{
-        height: auto;
-        max-height: 250pt;
-        width: auto;
+        height: 250pt;
+        width: 250pt;
         margin-right: auto;
     }
     #spk-flex .col .card.h-100{
@@ -238,9 +237,8 @@ table{
         margin-right: auto;
     }
     .col .spk{
-        height: auto;
-        max-height: 250pt;
-        width: auto;
+        height: 250pt;
+        width: 250pt;
         margin-right: auto;
     }
     #spk-flex .col .card.h-100{
