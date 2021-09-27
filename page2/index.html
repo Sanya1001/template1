@@ -1,1 +1,265 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous" defer></script>
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+    <!-- Latest compiled and minified CSS -->
+    <title>CLeaR 2022</title>
+</head>
+<body id="main">
+    <div class="nav-item"><button id="nav-btn">☰
+    </button></div>
+    <nav id="nav">
+        <ul>
+            <li>
+                <div class="nav-item" id="navitem1">
+                    <a href="#overview">Overview</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#topics">Topics</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#schedule">Schedule</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#speakers">Invited Speakers</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#accepted">Accepted Paper</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#dates">Important dates</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#">Program Committee</a>
+                </div>
+            </li>
+            <li>
+                <div class="nav-item">
+                    <a href="#org">Organizers</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <script>
+        const btn = document.getElementById('nav-btn')
+        const nav = document.getElementById('nav');
+    
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            btn.classList.toggle('active');
+        })
+    </script>
+    <!-- Bootstrap Static Header -->
+<div id="head-container">
+<div style="background: url(images/imageonline-co-overlayed-image\ \(1\).jpg)" class="jumbotron bg-cover text-white" id="header">
+    <div class="container py-5 text-center" id="header-text">
+        <h1 class="display-4 font-weight-bold">CLeaR 2022</h1>
+        <p class="font-italic mb-0">The First International Workshop on Combining Learning and Reasoning: Programming Languages, Formalisms, and Representations
+            <br>
+            In conjunction with the 28th IJCAI conference on artificial intelligence
+            <a href="https://ijcai19.org">(IJCAI-2019)</a>, February 22-March 1, 2022, Vancouver, BC, Canada
+        </p>
+        <p class="font-italic"><span>Workshop Day: TBD, <br>
+            Location: TBD</span>
+        </p>
+    </div>
+</div>
+</div>
+<nav class="nav flex-column nph" id="navbar">
+    <a class="nav-link active" aria-current="page" href="#overview" id="navitem1">Overview</a>
+    <a class="nav-link" href="#topics">Topics</a>
+    <a class="nav-link" href="#schedule">Schedule</a>
+    <a class="nav-link" href="#speakers">Invited Speakers</a>
+    <a class="nav-link" href="#accepted">Accepted Papers</a>
+    <a class="nav-link" href="#dates">Important Dates</a>
+    <a class="nav-link" href="#">Program Committee</a>
+    <a class="nav-link" href="#org">Organizers</a>
+    <!-- <a class="nav-link" href="#">Link</a> -->
+</nav>
+<div id="info">
+    <div id="progc">
+        <h1>Program Committee</h1>
+        <table id="progc-table" class="scrollmenu table table-success table-striped">
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Kareem Ahmed</li>
+                </td>
+                <td>University of California, Los Angeles</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Aneesha Bakharia</li>
+                </td>
+                <td>University of Queensland</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Asan Agibetov</li>
+                </td>
+                <td>Medical University of Vienna</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Antonio Vergari</li>
+                </td>
+                <td>University of Edinburgh</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Brandon Amos</li>
+                </td>
+                <td>Facebook</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Tirtharaj Dash</li>
+                </td>
+                <td>BITS Pilani, India</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Bernardo Cuenca Grau</li>
+                </td>
+                <td>Department of Computer Science, University of Oxford</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Georg Martius</li>
+                </td>
+                <td>Max Planck Institute for Intelligent Systems</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Giuseppe Marra</li>
+                </td>
+                <td>KU Leuven</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Dan Goldwasser</li>
+                </td>
+                <td>Purdue University</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Quan Guo</li>
+                </td>
+                <td>Sichuan University</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Matko Bošnjak</li>
+                </td>
+                <td>DeepMind</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Maxime Gasse</li>
+                </td>
+                <td>MILA research institute in artificial intelligence</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Nantia Makrynioti</li>
+                </td>
+                <td>Centrum voor Wiskunde en Informatica</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Quentin Cappart</li>
+                </td>
+                <td>Polytechnique Montreal</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Robert Peharz</li>
+                </td>
+                <td>Eindhoven University of Technology</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Robin Manhaeve</li>
+                </td>
+                <td>KU Leuven</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Rodrigo de Salvo Braz</li>
+                </td>
+                <td>Facebook</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Steven Holtzen</li>
+                </td>
+                <td>Northeastern University</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+            <tr class="table-item">
+                <td width="32%">
+                    <li>Stephen Bach</li>
+                </td>
+                <td>Computer Science Department, Brown University</td>
+                <!-- <td>kordjams@msu.edu</td> -->
+            </tr>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- Start of StatCounter Code for Default Guide -->
+    <script type="text/javascript">
+    var sc_project = 11083511;
+    var sc_invisible = 1;
+    var sc_security = "2f97c6cf";
+    var scJsHost = (("https:" == document.location.protocol) ?
+      "https://secure." : "http://www.");
+    document.write("<sc" + "ript type='text/javascript' src='" +
+      scJsHost +
+      "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript>
+    <div class="statcounter"><a title="web analytics" href="http://statcounter.com/" target="_blank"><img
+          class="statcounter" src="//c.statcounter.com/11083511/0/2f97c6cf/1/" alt="web
+    analytics"></a></div>
+    </noscript>
+    <!-- End of StatCounter Code for Default Guide -->
+</div>
+</body>
+</html>
