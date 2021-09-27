@@ -198,9 +198,9 @@ table{
 
 .col .spk{
     padding: 0.8rem;
-    height: auto;
-    width: auto;
-    max-height: 150pt;
+    height: 150pt;
+    width: 150pt;
+    /* max-height: 150pt; */
     margin-left: auto;
     /* border: solid; */
 }
